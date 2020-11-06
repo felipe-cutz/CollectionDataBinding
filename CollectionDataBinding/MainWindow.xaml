@@ -17,10 +17,10 @@
             <Border DockPanel.Dock="Top" Margin="0,0,0,4" BorderBrush="Blue" BorderThickness="2">
                 <DockPanel>
                     <Label Content="Usuario:" Margin="2"/>
-                    <TextBox Name="userTextBox" Margin="2" VerticalAlignment="Center"/>
+                    <TextBox Name="userTextBox" Margin="2" VerticalAlignment="Center" Text="{Binding Name}"/>
                 </DockPanel>
             </Border>
-            <ListBox Name="usersListBox" DisplayMemberPath="Name" SelectionMode="Single" SelectionChanged="usersListBox_SelectionChanged"/>
+        <ListBox Name="usersListBox" DisplayMemberPath="Name" SelectionMode="Single" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}"/>
             
 
         </DockPanel>
